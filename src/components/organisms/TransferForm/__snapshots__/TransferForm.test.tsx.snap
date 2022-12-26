@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TransferForm/> Se reenderice correctamente 1`] = `
+<div>
+  <form
+    class="sc-jSUZER fMUTQF"
+  >
+    <div
+      class="sc-gswNZR fGuKlY"
+    >
+      <label
+        class="sc-dkrFOg fZIonL"
+        for="receptor"
+      >
+        Destinatario
+      </label>
+      <input
+        class="sc-gKPRtg crDhfD"
+        id="receptor"
+        name="receptor"
+        type="text"
+        value=""
+      />
+      <p
+        class="sc-bcXHqe hkdUZn"
+      >
+        Ingresar mail valido
+      </p>
+    </div>
+    <div
+      class="sc-gswNZR fGuKlY"
+    >
+      <label
+        class="sc-dkrFOg fZIonL"
+        for="currency"
+      >
+        Moneda
+      </label>
+      <select
+        class="sc-iBYQkv WkIVr"
+        id="currency"
+      >
+        <option
+          value="BTC"
+        >
+          BTC
+        </option>
+        <option
+          value="ETH"
+        >
+          ETH
+        </option>
+        <option
+          value="USDT"
+        >
+          USDT
+        </option>
+        <option
+          value="DAI"
+        >
+          DAI
+        </option>
+      </select>
+    </div>
+    <div
+      class="sc-gswNZR fGuKlY"
+    >
+      <label
+        class="sc-dkrFOg fZIonL"
+        for="amount"
+      >
+        Importe
+      </label>
+      <input
+        class="sc-gKPRtg crDhfD"
+        id="amount"
+        name="amount"
+        type="text"
+        value=""
+      />
+      <p
+        class="sc-bcXHqe hkdUZn"
+      >
+        Ingresar importe valido
+      </p>
+    </div>
+    <button
+      class="sc-hLBbgP dDanPL"
+      type="submit"
+    >
+      Enviar
+    </button>
+  </form>
+</div>
+`;

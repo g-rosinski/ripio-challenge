@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextField/> Se espera que se reenderice correctamente 1`] = `
+<div>
+  <div
+    class="sc-gswNZR fGuKlY"
+  >
+    <input
+      class="sc-gKPRtg crDhfD"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
