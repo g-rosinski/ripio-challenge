@@ -9,13 +9,13 @@ describe('useDebounce', () => {
         jest.clearAllMocks()
     })
     
-    test('Se inicialice correctamente', () => {
+    it('Se inicialice correctamente', () => {
         const { result } = renderHook(() => useDebounce<string>(""))
         expect(typeof result.current[0]).toBe('string')
         expect(result.current[0]).toBe('')
     })
     
-    test('Debe devolver el despues de 300ms(default) del último cambio', async () => {
+    it('Debe devolver el despues de 300ms(default) del último cambio', async () => {
         const { result, rerender } = renderHook(useDebounce<string>,{
             initialProps: ""
         })
@@ -29,7 +29,7 @@ describe('useDebounce', () => {
 
     })
     
-    test('Debe devolver el despues de {x}ms del último cambio', async () => {
+    it('Debe devolver el despues de {x}ms del último cambio', async () => {
         const { result, rerender } = renderHook(({value, delay}) => useDebounce<string>(value, delay),{
             initialProps: {
                 value: "",

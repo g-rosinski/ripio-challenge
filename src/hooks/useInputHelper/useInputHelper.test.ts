@@ -7,7 +7,7 @@ describe('useInputHelper', () => {
     const errorMessage = "Valor incorrecto"
     const successMessage = "Valor correcto"
 
-    test('Se inicialice correctamente', () => {
+    it('Se inicialice correctamente', () => {
         const { result } = renderHook(() => useInputHelper({info: ""}))
         expect(result.current.displayHelperText).toBe(false)
         expect(result.current.interactive).toBe(true)
@@ -15,7 +15,7 @@ describe('useInputHelper', () => {
         expect(result.current.helperText).toBe('')
     })
 
-    test('Retorne mensaje de info como helperText', () => {
+    it('Retorne mensaje de info como helperText', () => {
         const { result } = renderHook(() => useInputHelper({info: infoMessage}))
         expect(result.current.displayHelperText).toBe(true)
         expect(result.current.interactive).toBe(true)
@@ -23,7 +23,7 @@ describe('useInputHelper', () => {
         expect(result.current.helperText).toBe(infoMessage)
     })
 
-    test('Retorne mensaje de error como helperText', () => {
+    it('Retorne mensaje de error como helperText', () => {
         const { result } = renderHook(() => useInputHelper({info: "", error: errorMessage}))
         expect(result.current.displayHelperText).toBe(true)
         expect(result.current.interactive).toBe(true)
@@ -31,7 +31,7 @@ describe('useInputHelper', () => {
         expect(result.current.helperText).toBe(errorMessage)
     })
 
-    test('Retorne mensaje de success como helperText', () => {
+    it('Retorne mensaje de success como helperText', () => {
         const { result } = renderHook(() => useInputHelper({info: "", success: successMessage}))
         expect(result.current.displayHelperText).toBe(true)
         expect(result.current.interactive).toBe(true)
@@ -39,7 +39,7 @@ describe('useInputHelper', () => {
         expect(result.current.helperText).toBe(successMessage)
     })
 
-    test('Siempre debe retornar un mensaje en helperText priorizando error > success > info', () => {
+    it('Siempre debe retornar un mensaje en helperText priorizando error > success > info', () => {
         const { result, rerender } = renderHook(useInputHelper, {
             initialProps: {
                 info: infoMessage, 
@@ -61,7 +61,7 @@ describe('useInputHelper', () => {
 
     })
 
-    test('Si se pasa disabled o readOnly en true, displayHelperText debe estar en false', () => {
+    it('Si se pasa disabled o readOnly en true, displayHelperText debe estar en false', () => {
         const { result, rerender } = renderHook(useInputHelper, {
             initialProps: {
                 info: infoMessage, 

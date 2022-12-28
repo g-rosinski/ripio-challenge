@@ -10,7 +10,7 @@ describe('useFormValidator', () => {
         jest.clearAllMocks()
     })
 
-    test('Formulario valido debe tener un string vacio', async () => {
+    it('Formulario valido debe tener un string vacio', async () => {
         const { result } = renderHook(() => useFormValidator())
         expect(typeof result.current.validateForm).toBe('function')
         let validationResult;
@@ -20,7 +20,7 @@ describe('useFormValidator', () => {
         expect(validationResult).toStrictEqual({name: ''})
     })
 
-    test('Formulario invalido debe tener un mensaje junto a la key', async () => {
+    it('Formulario invalido debe tener un mensaje junto a la key', async () => {
         const { result } = renderHook(() => useFormValidator())
         mockedRule.mockReturnValue("Nombre invalido")
         let validationResult;
@@ -30,7 +30,7 @@ describe('useFormValidator', () => {
         expect(validationResult).toStrictEqual({name: 'Nombre invalido'})
     })
 
-    test('Debe devolver el mensaje de la primera rule que no cumpla', async () => {
+    it('Debe devolver el mensaje de la primera rule que no cumpla', async () => {
         const { result } = renderHook(() => useFormValidator())
         const rules = [
             jest.fn().mockReturnValue(""),
@@ -44,7 +44,7 @@ describe('useFormValidator', () => {
         expect(validationResult).toStrictEqual({name: 'Es requerido'})
     })
 
-    test('Cuando un campo no posee validacion no se retorna entre los campos validados', async () => {
+    it('Cuando un campo no posee validacion no se retorna entre los campos validados', async () => {
         const { result } = renderHook(() => useFormValidator())
         let validationResult;
         act(() => {
