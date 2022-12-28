@@ -9,86 +9,109 @@ exports[`<TransferForm/> Se reenderice correctamente 1`] = `
       class="sc-gswNZR kGxItT"
     >
       <label
-        class="sc-dkrFOg fZIonL"
+        class="sc-dkrFOg hCrmYg"
+        for="emiter"
+      >
+        Emisor
+      </label>
+      <input
+        class="sc-gKPRtg bujMUW"
+        disabled=""
+        id="emiter"
+        name="emiter"
+        readonly=""
+        type="text"
+        value="usuario@mail.com"
+      />
+    </div>
+    <div
+      class="sc-gswNZR kGxItT"
+    >
+      <label
+        class="sc-dkrFOg hCrmYg"
         for="receptor"
       >
         Destinatario
       </label>
       <input
-        class="sc-gKPRtg crDhfD"
+        class="sc-gKPRtg bujMUW"
         id="receptor"
         name="receptor"
         type="text"
         value=""
       />
       <p
-        class="sc-bcXHqe hkdUZn"
+        class="sc-bcXHqe lmDvli"
       >
         Ingresar mail valido
       </p>
     </div>
     <div
-      class="sc-gswNZR kGxItT"
+      class="sc-ftTHYK gkCXtp"
     >
-      <label
-        class="sc-dkrFOg fZIonL"
-        for="currency"
+      <div
+        class="sc-gswNZR kGxItT"
       >
-        Moneda
-      </label>
-      <select
-        class="sc-iBYQkv WkIVr"
-        id="currency"
+        <label
+          class="sc-dkrFOg hCrmYg"
+          for="currency"
+        >
+          Moneda
+        </label>
+        <select
+          class="sc-iBYQkv dOcTND"
+          id="currency"
+        >
+          <option
+            value="BTC"
+          >
+            BTC
+          </option>
+          <option
+            value="ETH"
+          >
+            ETH
+          </option>
+          <option
+            value="USDT"
+          >
+            USDT
+          </option>
+          <option
+            value="DAI"
+          >
+            DAI
+          </option>
+        </select>
+      </div>
+      <div
+        class="sc-gswNZR kGxItT"
       >
-        <option
-          value="BTC"
+        <label
+          class="sc-dkrFOg hCrmYg"
+          for="amount"
         >
-          BTC
-        </option>
-        <option
-          value="ETH"
+          Importe
+        </label>
+        <input
+          class="sc-gKPRtg bujMUW"
+          id="amount"
+          name="amount"
+          type="text"
+          value=""
+        />
+        <p
+          class="sc-bcXHqe lmDvli"
         >
-          ETH
-        </option>
-        <option
-          value="USDT"
-        >
-          USDT
-        </option>
-        <option
-          value="DAI"
-        >
-          DAI
-        </option>
-      </select>
-    </div>
-    <div
-      class="sc-gswNZR kGxItT"
-    >
-      <label
-        class="sc-dkrFOg fZIonL"
-        for="amount"
-      >
-        Importe
-      </label>
-      <input
-        class="sc-gKPRtg crDhfD"
-        id="amount"
-        name="amount"
-        type="text"
-        value=""
-      />
-      <p
-        class="sc-bcXHqe hkdUZn"
-      >
-        Ingresar importe valido
-      </p>
+          Ingresar importe valido
+        </p>
+      </div>
     </div>
     <button
-      class="sc-hLBbgP dDanPL"
+      class="sc-hLBbgP jMMbMG"
       type="submit"
     >
-      Enviar
+      Transferir
     </button>
   </form>
 </div>

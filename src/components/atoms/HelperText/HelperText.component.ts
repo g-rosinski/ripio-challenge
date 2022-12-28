@@ -7,7 +7,6 @@ interface HelperTextProps {
 
 export const HelperText = styled.p<HelperTextProps>`
     width: 100%;
-    text-align: center;
     font-size: 12px;
     line-height: 14px;
     color: grey;

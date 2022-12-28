@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 import { CURRENCY_LIST } from "../../mocks/crypto-currencies"
+import { Transfer } from "../../models/Transfer"
 
 export interface TransferState {
     emiter: string,
@@ -15,12 +16,6 @@ export const initialState: TransferState = {
     amount: undefined,
 }
 
-type TransferActionPayload = {
-    receptor: string,
-    currency: string,
-    amount: number
-}
-
 export const transferSlice = createSlice({
     name: 'transfer',
     initialState,
@@ -28,15 +23,14 @@ export const transferSlice = createSlice({
         setEmiter: (state, action: PayloadAction<string>) => {
             state.emiter = action.payload
         },
-        setTransfer: (state, action: PayloadAction<TransferActionPayload>) => {
+        setTransfer: (state, action: PayloadAction<Transfer>) => {
             state.receptor = action.payload.receptor
             state.currency = action.payload.currency
             state.amount = action.payload.amount
+            state.emiter = action.payload.emiter
         },
         newTransfer: (state) => {
-            state.receptor = initialState.receptor
-            state.currency = initialState.currency
-            state.amount = initialState.amount
+            state = initialState
         },
     }
 })

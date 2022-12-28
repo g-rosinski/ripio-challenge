@@ -6,8 +6,8 @@ import { TransferForm, TransferFormType } from "../../components/organisms/Trans
 import { isEmail, maxValue, required } from "../../shared/validation.rules"
 import { CURRENCY_LIST } from "../../mocks/crypto-currencies"
 import { RootState, useAppDispatch } from "../../redux/store"
-import { newTransfer, setEmiter, setTransfer } from "../../redux/slices/transferSlice"
-import { Label, Title } from "../../components/atoms"
+import { newTransfer, setTransfer } from "../../redux/slices/transferSlice"
+import { Title } from "../../components/atoms"
 import { existUser } from "../../services/userService"
 import { BasicPage } from "../../components/layouts/BasicPage"
 import { paths } from "../../routers/app.router"
@@ -25,7 +25,6 @@ export const TransferPage: React.FC = () => {
     useEffect(() => {
         dispatch({type: 'FETCH_USER_BALANCE', payload: user})
         dispatch(newTransfer())
-        dispatch(setEmiter(user))        
     }, [dispatch, user])
 
     const validateTransferForm = useCallback((form: TransferFormType) => {
@@ -52,18 +51,17 @@ export const TransferPage: React.FC = () => {
     return (
         <BasicPage>
             <Title>Enviar transferencia</Title>
-
-            {transfer.emiter && <Label>Emisor: {transfer.emiter}</Label>}
+            
             <TransferForm 
                 initialValues={{
                     ...transfer, 
+                    emiter: user,
                     amount: transfer.amount?.toString() || ''
                 }}
                 currencies={CURRENCY_LIST}
                 onSubmit={handleOnSubmitForm}
                 validateForm={validateTransferForm}
             />
-            
         </BasicPage>
     )
 }

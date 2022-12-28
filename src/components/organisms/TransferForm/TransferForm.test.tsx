@@ -7,7 +7,7 @@ import { TransferFormType } from './TransferForm.types'
 describe('<TransferForm/>', () => {
 
     const currencies = ['BTC', 'ETH', 'USDT', 'DAI']
-    const initialValuesForm: TransferFormType = { receptor: '', currency: currencies[0], amount: ''}
+    const initialValuesForm: TransferFormType = { emiter: 'usuario@mail.com', receptor: '', currency: currencies[0], amount: ''}
     const onSubmitMock = jest.fn()
     const validateForm = jest.fn()
     
@@ -25,16 +25,18 @@ describe('<TransferForm/>', () => {
 
     test('Se reenderice correctamente', () => {
         const {container} = render(<TransferForm {...baseProps}/>)
-        expect(screen.getByRole('textbox',{name: /destinatario/i})).toHaveValue("")
-        expect(screen.getByRole('combobox',{name: /moneda/i})).toHaveValue(currencies[0])
-        expect(screen.getByRole('textbox',{name: /importe/i})).toHaveValue("")
+        expect(screen.getByRole('textbox',{name: /emisor/i})).toHaveValue(initialValuesForm.emiter)
+        expect(screen.getByRole('textbox',{name: /emisor/i})).toHaveAttribute('readonly')
+        expect(screen.getByRole('textbox',{name: /destinatario/i})).toHaveValue(initialValuesForm.receptor)
+        expect(screen.getByRole('combobox',{name: /moneda/i})).toHaveValue(initialValuesForm.currency)
+        expect(screen.getByRole('textbox',{name: /importe/i})).toHaveValue(initialValuesForm.amount)
         expect(container).toMatchSnapshot()
     })
 
     test('Al hacer click verificar si no tiene errores debe hacer submit', () => {
         render(<TransferForm {...baseProps}/>)
 
-        userEvent.click(screen.getByRole('button',{name: /enviar/i}))
+        userEvent.click(screen.getByRole('button',{name: /transferir/i}))
         expect(validateForm).toBeCalledWith(initialValuesForm)
         expect(onSubmitMock).toBeCalledWith(initialValuesForm)
     })
@@ -43,7 +45,7 @@ describe('<TransferForm/>', () => {
         validateForm.mockReturnValue({receptor: "Destinatario invalido"})
         render(<TransferForm {...baseProps} />)
 
-        userEvent.click(screen.getByRole('button', {name: /enviar/i}))
+        userEvent.click(screen.getByRole('button', {name: /transferir/i}))
         expect(validateForm).toBeCalledWith(initialValuesForm)
         expect(screen.getByText("Destinatario invalido")).toBeInTheDocument()
         expect(onSubmitMock).not.toBeCalled()
@@ -53,7 +55,7 @@ describe('<TransferForm/>', () => {
         render(<TransferForm {...baseProps} initialValues={{...initialValuesForm, receptor: 'usuario@gmail.com'}} />)
 
         expect(screen.getByRole('textbox',{name: /destinatario/i})).toHaveValue('usuario@gmail.com')
-        userEvent.click(screen.getByRole('button',{name: /enviar/i}))
+        userEvent.click(screen.getByRole('button',{name: /transferir/i}))
         expect(validateForm).toBeCalledWith({...initialValuesForm, receptor: 'usuario@gmail.com'})
         expect(onSubmitMock).toBeCalledWith({...initialValuesForm, receptor: 'usuario@gmail.com'})
     })
@@ -62,7 +64,7 @@ describe('<TransferForm/>', () => {
         render(<TransferForm {...baseProps} editable={false} />)
 
         const input = screen.getByRole('textbox',{name: /importe/i})
-        const button = screen.getByRole('button',{name: /enviar/i})
+        const button = screen.getByRole('button',{name: /transferir/i})
         expect(input).toHaveValue('')
 
         userEvent.type(input, '150')

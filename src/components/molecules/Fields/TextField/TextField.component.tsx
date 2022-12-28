@@ -1,7 +1,6 @@
 import React, { InputHTMLAttributes, ChangeEvent } from "react"
 import useInputHelper from "../../../../hooks/useInputHelper/useInputHelper.hook"
-import { InputGroup, Label, HelperText } from "../../../atoms"
-import { Input } from "./TextField.styles"
+import { InputGroup, Label, HelperText, Input } from "../../../atoms"
 
 type TextFieldProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'type' | 'onChange'> & {
     value: string,
