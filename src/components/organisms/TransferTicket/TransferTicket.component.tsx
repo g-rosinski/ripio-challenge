@@ -35,7 +35,7 @@ export const TransferTicket: React.FC<TransferTicketProps> = ({
         <LabellyRecord 
             label="Estado de la transferencia" 
             value={status} 
-            displaydivider={false}
+            displayDivider={false}
         />
     </TransferTicketContainer>
 )

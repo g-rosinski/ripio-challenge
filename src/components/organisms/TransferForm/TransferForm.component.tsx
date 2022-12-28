@@ -38,7 +38,7 @@ export const TransferForm: React.FC<TransferFormProps> = ({
             <TextField 
                 name="receptor"
                 label="Destinatario"
-                helper="Ingresar mail valido"
+                helper="Ingresar el mail del contacto"
                 value={values.receptor}
                 error={errors.receptor}
                 disabled={!editable}
@@ -57,7 +57,7 @@ export const TransferForm: React.FC<TransferFormProps> = ({
                 <TextField 
                     name="amount"
                     label="Importe"
-                    helper="Ingresar importe valido"
+                    helper="Ingresar un importe a transferir."
                     value={values.amount}
                     error={errors.amount}
                     onChange={handleOnChangeField}

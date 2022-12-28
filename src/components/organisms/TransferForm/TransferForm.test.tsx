@@ -6,8 +6,8 @@ import { TransferFormType } from './TransferForm.types'
 
 describe('<TransferForm/>', () => {
 
-    const currencies = ['BTC', 'ETH', 'USDT', 'DAI']
-    const initialValuesForm: TransferFormType = { emiter: 'usuario@mail.com', receptor: '', currency: currencies[0], amount: ''}
+    const currencies = ['BTC', 'ETH', 'USDT', 'DAI'].map(c => ({value: c}))
+    const initialValuesForm: TransferFormType = { emiter: 'usuario@mail.com', receptor: '', currency: currencies[0].value, amount: ''}
     const onSubmitMock = jest.fn()
     const validateForm = jest.fn()
     

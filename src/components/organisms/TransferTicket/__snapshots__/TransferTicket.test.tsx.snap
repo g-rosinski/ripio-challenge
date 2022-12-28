@@ -22,6 +22,7 @@ exports[`<TransferTicket /> Se reenderice Correctamente 1`] = `
     </div>
     <hr
       class="sc-jrcTuL ehiTLY"
+      role="presentation"
     />
     <div
       class="sc-gswNZR cRPCdo"
@@ -40,6 +41,7 @@ exports[`<TransferTicket /> Se reenderice Correctamente 1`] = `
     </div>
     <hr
       class="sc-jrcTuL ehiTLY"
+      role="presentation"
     />
     <div
       class="sc-gswNZR cRPCdo"
@@ -58,6 +60,7 @@ exports[`<TransferTicket /> Se reenderice Correctamente 1`] = `
     </div>
     <hr
       class="sc-jrcTuL ehiTLY"
+      role="presentation"
     />
     <div
       class="sc-gswNZR cRPCdo"
@@ -71,11 +74,12 @@ exports[`<TransferTicket /> Se reenderice Correctamente 1`] = `
       <label
         class="sc-eDvSVe MAutU"
       >
-        28/12/2022  16:11
+        28/12/2022  17:25
       </label>
     </div>
     <hr
       class="sc-jrcTuL ehiTLY"
+      role="presentation"
     />
     <div
       class="sc-gswNZR cRPCdo"
@@ -92,9 +96,6 @@ exports[`<TransferTicket /> Se reenderice Correctamente 1`] = `
         COMPLETED
       </label>
     </div>
-    <hr
-      class="sc-jrcTuL ehiTLY"
-    />
   </div>
 </div>
 `;

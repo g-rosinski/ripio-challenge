@@ -1,4 +1,5 @@
 import { UseFormProps } from "../../../hooks/useForm/useForm.hook"
+import { SelectOption } from "../../molecules/Fields/SelectField/SelectField.component"
 
 export type TransferFormType = {
     emiter:string,
@@ -8,6 +9,6 @@ export type TransferFormType = {
 }
 
 export type TransferFormProps = UseFormProps<TransferFormType> & {
-    currencies: string[]
+    currencies: SelectOption[]
     editable?: boolean,
 }

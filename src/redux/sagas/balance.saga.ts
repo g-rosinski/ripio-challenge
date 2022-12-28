@@ -2,13 +2,13 @@ import { PayloadAction } from '@reduxjs/toolkit'
 import { call, put, takeEvery } from 'redux-saga/effects'
 import { TransferTransaction } from '../../models/Transfer'
 import { User } from '../../models/User'
-import { findUser } from '../../services/userService'
+import { getUserData } from '../../services/userService'
 import { updateBalance } from '../slices/balanceHistorySlice'
 import { debitBalance, setBalance } from '../slices/balanceSlice'
 
 function* handleFetchUserBalance(action: PayloadAction<string>){
-    const username = action.payload
-    const userBalance: User | undefined = yield call(findUser, username)
+    const loggedUsername = action.payload
+    const userBalance: User | undefined = yield call(getUserData, loggedUsername)
     if(!!userBalance?.balance){
         yield put(setBalance(userBalance?.balance))
     }

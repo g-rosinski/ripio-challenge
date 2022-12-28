@@ -2,8 +2,13 @@ import React, { InputHTMLAttributes } from "react"
 import useInputHelper from "../../../../hooks/useInputHelper/useInputHelper.hook"
 import { InputGroup, Label, HelperText, Select } from "../../../atoms"
 
+export type SelectOption = {
+    value: string,
+    label?: string
+}
+
 type SelectFieldProps = InputHTMLAttributes<HTMLSelectElement> & {
-    options: string[],
+    options: SelectOption[],
     label?: string,
     helper?: string,
     error?: string,
@@ -29,8 +34,8 @@ const SelectField: React.FC<SelectFieldProps> = ({
             { !!label && <Label htmlFor={name}>{label}</Label> }
             <Select id={name} disabled={disabled} {...props}>
                 { 
-                    options.map((option, i) => 
-                        <option key={i} value={option}>{option}</option>
+                    options.map(({value, label}, i) => 
+                        <option key={i} value={value}>{label || value}</option>
                     )
                 }
             </Select>

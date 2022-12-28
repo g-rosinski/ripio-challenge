@@ -13,6 +13,7 @@ import { BasicPage } from "../../components/layouts/BasicPage"
 import { paths } from "../../routers/app.router"
 import { useFormValidator } from "../../hooks"
 import { useUserContext } from "../../contexts/UserContext"
+import { currencyFormat } from "../../shared/formatter"
 
 export const TransferPage: React.FC = () => {
     const navigate = useNavigate()
@@ -58,7 +59,10 @@ export const TransferPage: React.FC = () => {
                     emiter: user,
                     amount: transfer.amount?.toString() || ''
                 }}
-                currencies={CURRENCY_LIST}
+                currencies={CURRENCY_LIST.map(currency => ({
+                    value: currency, 
+                    label: `${currency} - Saldo: ${currencyFormat(balance[currency] || 0)}`
+                }))}
                 onSubmit={handleOnSubmitForm}
                 validateForm={validateTransferForm}
             />

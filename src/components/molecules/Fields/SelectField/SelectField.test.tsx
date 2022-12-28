@@ -6,7 +6,7 @@ import SelectField from './SelectField.component'
 describe('<SelectField/>', () => {
 
     const onChangeMock = jest.fn()
-    const optionsMock = ['DAI','USDT','BTH','ETH']
+    const optionsMock = ['DAI','USDT','BTH','ETH'].map(c => ({value: c}))
 
     beforeEach(() => {
         jest.clearAllMocks()
@@ -16,7 +16,7 @@ describe('<SelectField/>', () => {
         
        const { container } = render(<SelectField options={optionsMock} onChange={onChangeMock} />)
         
-        expect(screen.getByRole('combobox')).toHaveValue(optionsMock[0])
+        expect(screen.getByRole('combobox')).toHaveValue(optionsMock[0].value)
         expect(screen.queryAllByRole('option').length).toBe(4)
         expect(container).toMatchSnapshot()
     })
@@ -39,7 +39,7 @@ describe('<SelectField/>', () => {
         
         userEvent.selectOptions(select,['USDT'])
         expect(onChangeMock).not.toBeCalled()
-        expect(select).toHaveValue(optionsMock[0])
+        expect(select).toHaveValue(optionsMock[0].value)
     })
 
     test('Se espera que prop value se cambie al setear un value nuevo', async () => {
@@ -47,11 +47,11 @@ describe('<SelectField/>', () => {
         
         const select = screen.getByRole('combobox')
         
-        expect(select).toHaveValue(optionsMock[0])
+        expect(select).toHaveValue(optionsMock[0].value)
 
         optionsMock.forEach(option => {
-            rerender(<SelectField options={optionsMock} value={option} onChange={onChangeMock} />)
-            expect(select).toHaveValue(option)
+            rerender(<SelectField options={optionsMock} value={option.value} onChange={onChangeMock} />)
+            expect(select).toHaveValue(option.value)
         })
     })
 
