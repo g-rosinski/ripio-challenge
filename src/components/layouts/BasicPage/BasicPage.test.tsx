@@ -4,7 +4,7 @@ import BasicPage from './BasicPage.component'
 
 describe('<BasicPage/>', () => {
 
-    test('Se espera que se reenderice correctamente', () => {
+    it('Se espera que se reenderice correctamente', () => {
         const {container} = render(<BasicPage><></></BasicPage>)
 
         expect(container).toMatchSnapshot()

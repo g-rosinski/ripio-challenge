@@ -9,26 +9,26 @@ exports[`<TransferConfirmationForm/> Se reenderice correctamente 1`] = `
       class="sc-gswNZR kGxItT"
     >
       <label
-        class="sc-dkrFOg fZIonL"
+        class="sc-dkrFOg hCrmYg"
         for="token"
       >
         Token
       </label>
       <input
-        class="sc-gKPRtg crDhfD"
+        class="sc-gKPRtg bujMUW"
         id="token"
         name="token"
         type="text"
         value=""
       />
       <p
-        class="sc-bcXHqe hkdUZn"
+        class="sc-bcXHqe lmDvli"
       >
         Verificar token para confirmar la transferencia
       </p>
     </div>
     <button
-      class="sc-hLBbgP dDanPL"
+      class="sc-hLBbgP jMMbMG"
       type="submit"
     >
       Verificar

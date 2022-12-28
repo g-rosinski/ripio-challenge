@@ -1,5 +1,5 @@
 import React from "react";
-import { createBrowserRouter, Navigate } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import { TransferPage, TransferConfirmationPage, TransferSuccessPage } from "../pages";
 
 export enum paths {
