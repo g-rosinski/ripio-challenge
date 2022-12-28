@@ -23,6 +23,6 @@ export default createBrowserRouter([
     },
     {
       path: "/",
-      element: <Navigate to={paths.transferencia} replace />
+      element: <></>,
     }
   ]);

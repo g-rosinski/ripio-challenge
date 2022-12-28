@@ -6,7 +6,7 @@ exports[`<TransferForm/> Se reenderice correctamente 1`] = `
     class="sc-jSUZER fMUTQF"
   >
     <div
-      class="sc-gswNZR fGuKlY"
+      class="sc-gswNZR kGxItT"
     >
       <label
         class="sc-dkrFOg fZIonL"
@@ -28,7 +28,7 @@ exports[`<TransferForm/> Se reenderice correctamente 1`] = `
       </p>
     </div>
     <div
-      class="sc-gswNZR fGuKlY"
+      class="sc-gswNZR kGxItT"
     >
       <label
         class="sc-dkrFOg fZIonL"
@@ -63,7 +63,7 @@ exports[`<TransferForm/> Se reenderice correctamente 1`] = `
       </select>
     </div>
     <div
-      class="sc-gswNZR fGuKlY"
+      class="sc-gswNZR kGxItT"
     >
       <label
         class="sc-dkrFOg fZIonL"
