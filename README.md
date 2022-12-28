@@ -45,7 +45,7 @@ npm run serve
 ```
 Ahora tendras disponible una dirección(http://localhost:3010) para consumir el componente.
 
-**URL del componente: http://localhost:3010/main.js**
+**URL del componente: http://localhost:3010/p2p.js**
 
 #### Uso del componente
 
@@ -56,7 +56,7 @@ Ejemplo:
 <html lang="es">
   <head>
     <!-- Agregar el bundle del componente -->
-    <script src="http://localhost:3010/main.js"></script>
+    <script src="http://localhost:3010/p2p.js"></script>
   </head>
   <body>
     <!-- DOM Element donde necesito que se reenderice el componente -->
@@ -70,7 +70,7 @@ Ejemplo:
   </body>
 </html>
 ```
-* Se debe consumir el bundle, en el ejemplo se agrega:  `<script src="http://localhost:3010/main.js"></script>`
+* Se debe consumir el bundle, en el ejemplo se agrega:  `<script src="http://localhost:3010/p2p.js"></script>`
 * Al incoporar el bundle, a travez de window['mountApp'] se disponibiliza una función que permite renderizar el componente. Se le debe pasar como argumento el id de un elemento HTML donde se va a renderizar el componente y los parametros iniciales del componente.
 `window['mountApp'] = (elementID:string, params: AppParams) => void`
 
