@@ -25,4 +25,6 @@ export default createBrowserRouter([
       path: "/",
       element: <></>,
     }
-  ]);
+  ], {
+    basename: '/p2p'
+  });

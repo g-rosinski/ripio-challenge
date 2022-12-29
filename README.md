@@ -5,29 +5,26 @@ Web Component el cual permita el envío de fondos crypto entre pares (dos usuari
 
 ### Consideraciones del Web Component
 - Debe recibir el usuario (email) como parametro. Se asume que está autenticado
-- Debe recibir el balance del usuario por parametro (monto por divisas)
+- Obtiene el balance del usuario por parametro
 - Contiene la lista de usuarios disponibles
 - Divisas disponibles: BTC, ETH, USDT, DAI
 
-#### [User story]  Transferencia
-Como Usuario emisor 
-Quiero realizar una transferencia crypto a un usuario receptor
-Para enviar fondos
-
-Criterios de aceptación:
+#### Transferencia
 - Debe seleccionar divisa, monto y receptor
 - El monto no debe superar el balance del emisor
 - El balance del usuario es parametrizable
 - Cada divisa tiene su balance disponible
+- Las transferencias mayor a 1000 quedarán en estado pendiente.
+- Las transferencias menor a 1000 quedarán en estado compleatdo.
 
 #### Flujo de pantallas
-1. Pantalla de envio(/transferencia): Ingreso de receptor, criptodivisa y monto
-2. Pantalla de ingreso de OTP(/transferencia/confirmar): Ingreso token de 6 dígitos one-time-password
-3. Pantalla de exito(/transferencia/exitosa): Visualiza emisor/receptor, la criptodivisa enviada y el monto, así como la fecha de la transacción y un status (completada o pendiente)
+1. Pantalla de envio(/p2p/transferencia): Ingreso de receptor, criptodivisa y monto
+2. Pantalla de ingreso de OTP(/p2p/transferencia/confirmar): Ingreso token de 6 dígitos one-time-password
+3. Pantalla de exito(/p2p/transferencia/exitosa): Visualiza emisor/receptor, la criptodivisa enviada y el monto, así como la fecha de la transacción y un status (completada o pendiente)
 
 ### Como utilizar el componente
 
-#### Levantar el proyecto
+#### 1.  Levantar el proyecto
 
 1. La primera vez es necesario instalar las dependencias para compilar el proyecto.
 ```
@@ -47,7 +44,7 @@ Ahora tendras disponible una dirección(http://localhost:3010) para consumir el 
 
 **URL del componente: http://localhost:3010/p2p.js**
 
-#### Uso del componente
+#### 2. Incorporar componente
 
 A continuación un ejemplo simple para usar el componente.
 
@@ -74,10 +71,11 @@ Ejemplo:
 * Al incoporar el bundle, a travez de window['mountApp'] se disponibiliza una función que permite renderizar el componente. Se le debe pasar como argumento el id de un elemento HTML donde se va a renderizar el componente y los parametros iniciales del componente.
 `window['mountApp'] = (elementID:string, params: AppParams) => void`
 
-## p2p Component - Documentación
+#### 3. API del componente
 
 ### `window['mountApp'](elementID, params)`
-Reenderiza el componente.
+Monta el componente. 
+**Importante**: Se renderiza la pantalla de transferencia cuando se ingresa a la ruta de la pantalla de envio: */p2p/transferencia*
 + `elementID` <abbr>string</abbr> : ID del elemento donde se quiere renderizar el componente   
 + `params` <abbr>AppParams</abbr> : Parametros del componente como objetct `{}`
 ```
@@ -90,11 +88,19 @@ Reenderiza el componente.
 Desmonta el componente
 + `elementID` <abbr>string</abbr> : ID del elemento donde se encuentra montado el componente.
 
-## Leventar app para desarrollo
+## Desarrollo
 
-En la raiz del proyecto `/` correr en la terminal el script start:
-### `npm run start`
+Instalar las dependencias necesarias para el desarrollo.
+```
+npm run install
+```
+Levantar el proyeto.:
+```
+npm run start
+```
 Abrir [http://localhost:3010](http://localhost:3010) para ver el proyecto en el navegador.
 
 Luego de cada desarrollo correr los tests unitarios del proyecto con el siguiente script:
-### `npm run test`
+```
+npm run test
+```

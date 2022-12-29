@@ -25,29 +25,34 @@ exports[`<TransferForm/> Se reenderice correctamente 1`] = `
       />
     </div>
     <div
-      class="sc-gswNZR kGxItT"
+      class="sc-pyfCe gqyrsL"
     >
-      <label
-        class="sc-dkrFOg hCrmYg"
-        for="receptor"
+      <div
+        class="sc-gswNZR kGxItT"
       >
-        Destinatario
-      </label>
-      <input
-        class="sc-gKPRtg bujMUW"
-        id="receptor"
-        name="receptor"
-        type="text"
-        value=""
-      />
-      <p
-        class="sc-bcXHqe lmDvli"
-      >
-        Ingresar el mail del contacto
-      </p>
+        <label
+          class="sc-dkrFOg hCrmYg"
+          for="receptor"
+        >
+          Destinatario
+        </label>
+        <input
+          autocomplete="off"
+          class="sc-gKPRtg bujMUW"
+          id="receptor"
+          name="receptor"
+          type="text"
+          value=""
+        />
+        <p
+          class="sc-bcXHqe lmDvli"
+        >
+          Ingresar el mail del contacto
+        </p>
+      </div>
     </div>
     <div
-      class="sc-pyfCe bbKZuU"
+      class="sc-csuSiG benBnR"
     >
       <div
         class="sc-gswNZR kGxItT"

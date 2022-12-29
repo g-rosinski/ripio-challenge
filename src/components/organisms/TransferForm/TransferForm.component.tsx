@@ -11,6 +11,7 @@ export const TransferForm: React.FC<TransferFormProps> = ({
     editable = true,
     receptorOptions,
     onQueryReceptor,
+    onSelectReceptor,
     onSubmit,
     validateForm,
 }) => {
@@ -26,6 +27,11 @@ export const TransferForm: React.FC<TransferFormProps> = ({
         validateForm,
         onSubmit
     })
+
+    const handleOnSelectReceptor = (value:string) => {
+        onSelectReceptor(value)
+        changeFieldValue("receptor", value)
+    }
 
     return (
         <Form onSubmit={handleOnSubmitForm}>
@@ -46,7 +52,7 @@ export const TransferForm: React.FC<TransferFormProps> = ({
                 error={errors.receptor}
                 disabled={!editable}
                 onChange={handleOnChangeField}
-                onSelectOption={option => changeFieldValue("receptor", option)}
+                onSelectOption={handleOnSelectReceptor}
                 onQuery={onQueryReceptor}
                 options={receptorOptions}
             />

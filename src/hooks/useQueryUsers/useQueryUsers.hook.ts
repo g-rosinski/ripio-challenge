@@ -10,6 +10,7 @@ type UseQueryUsersProps = {
 type UseQueryUsersReturn = {
     queryResults: string[],
     setQuery: (query:string) => void
+    clearResults: () => void
 }
 
 type UseQueryUsers = (props: UseQueryUsersProps) => UseQueryUsersReturn
@@ -28,8 +29,13 @@ export const useQueryUsers:UseQueryUsers = ({limit = 10}) => {
         }
     }, [queryDebounced, user, limit, setQueryResults])
 
+    const clearResults = () => {
+        setQueryResults([])
+    }
+
     return {
         queryResults, 
-        setQuery
+        setQuery,
+        clearResults
     }
 }

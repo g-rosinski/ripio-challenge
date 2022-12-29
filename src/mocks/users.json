@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "username": "1",
+        "username": "lionel.scaloni@gmail.com",
         "balance": {
             "BTC": 1500, 
             "ETH": 2500, 
@@ -21,71 +21,173 @@
     },
     {
         "id": 3,
-        "username": "geronimo.rulli@gmail.com"
+        "username": "geronimo.rulli@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
     },
     {
         "id": 4,
-        "username": "franco.armani@gmail.com"
+        "username": "franco.armani@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
     },
     {
         "id": 5,
-        "username": "nahuel.molina@gmail.com"
+        "username": "nahuel.molina@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
     },
     {
         "id": 6,
-        "username": "gonzalo.montiel@gmail.com"
+        "username": "gonzalo.montiel@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
     },
     {
         "id": 7,
-        "username": "cristian.romero@gmail.com"
+        "username": "cristian.romero@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
     },
     {
         "id": 8,
-        "username": "german.pezzella@gmail.com"
+        "username": "german.pezzella@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
     },
     {
         "id": 9,
-        "username": "nicolas.otamendi@gmail.com"
+        "username": "nicolas.otamendi@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
     },
     {
         "id": 10,
-        "username": "lisandro.martinez@gmail.com"
+        "username": "lisandro.martinez@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
     },
     {
         "id": 11,
-        "username": "marcos.acuna@gmail.com"
+        "username": "marcos.acuna@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
     },
     {
         "id": 12,
-        "username": "nicolas.tagliafico@gmail.com"
+        "username": "nicolas.tagliafico@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
     },
     {
         "id": 13,
-        "username": "juan.foyth@gmail.com"
+        "username": "juan.foyth@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
     },
     {
         "id": 14,
-        "username": "rodrigo.de.paul@gmail.com"
+        "username": "rodrigo.de.paul@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
     },
     {
         "id": 15,
-        "username": "leandro.paredes@gmail.com"
+        "username": "leandro.paredes@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
     },
     {
         "id": 16,
-        "username": "alexis.mac.allister@gmail.com"
+        "username": "alexis.mac.allister@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
     },
     {
         "id": 17,
-        "username": "guido.rodriguez@gmail.com"
+        "username": "guido.rodriguez@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
     },
     {
         "id": 18,
-        "username": "alejandro.gomez@gmail.com"
+        "username": "alejandro.gomez@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
     },
     {
         "id": 19,
-        "username": "enzo.fernandez@gmail.com"
+        "username": "enzo.fernandez@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
     },
     {
         "id": 20,

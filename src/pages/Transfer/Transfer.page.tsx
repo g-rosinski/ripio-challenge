@@ -21,13 +21,15 @@ export const TransferPage: React.FC = () => {
     const { balance } = useSelector((state: RootState) => state.balance)
     const transfer = useSelector((state: RootState) => state.transfer)
     const { validateForm } = useFormValidator<TransferFormType>()
-    const { queryResults, setQuery} = useQueryUsers({})
+    const { queryResults, setQuery, clearResults } = useQueryUsers({})
     const { user } = useUserContext()
 
     useEffect(() => {
-        dispatch({type: 'FETCH_USER_BALANCE', payload: user})
+        if(!Object.keys(balance).length){
+            dispatch({type: 'FETCH_USER_BALANCE', payload: user})
+        }
         dispatch(newTransfer())
-    }, [dispatch, user])
+    }, [dispatch, user, balance])
 
     const validateTransferForm = useCallback((form: TransferFormType) => {
         const founds = balance[form.currency] | 0
@@ -66,6 +68,7 @@ export const TransferPage: React.FC = () => {
                 }))}
                 receptorOptions={queryResults}
                 onQueryReceptor={setQuery}
+                onSelectReceptor={() => clearResults()}
                 onSubmit={handleOnSubmitForm}
                 validateForm={validateTransferForm}
             />

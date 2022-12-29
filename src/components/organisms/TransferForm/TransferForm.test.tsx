@@ -7,15 +7,22 @@ import { TransferFormType } from './TransferForm.types'
 describe('<TransferForm/>', () => {
 
     const currencies = ['BTC', 'ETH', 'USDT', 'DAI'].map(c => ({value: c}))
-    const initialValuesForm: TransferFormType = { emiter: 'usuario@mail.com', receptor: '', currency: currencies[0].value, amount: ''}
+    const initialValuesForm: TransferFormType = { 
+        emiter: 'usuario@mail.com', 
+        receptor: '', 
+        currency: currencies[0].value, 
+        amount: ''
+    }
     const onSubmitMock = jest.fn()
     const validateForm = jest.fn()
     const onQueryReceptor = jest.fn()
+    const onSelectReceptor = jest.fn()
     
     const baseProps = {
         initialValues: initialValuesForm,
         onSubmit: onSubmitMock,
         validateForm: validateForm,
+        onSelectReceptor,
         onQueryReceptor,
         receptorOptions: [],
         currencies
@@ -76,5 +83,27 @@ describe('<TransferForm/>', () => {
         userEvent.click(button)
         expect(validateForm).not.toBeCalled()
         expect(onSubmitMock).not.toBeCalled()
+    })
+
+    test('El campo Destinatario debe funcionar con Autocomplete', () => {
+        const { rerender } = render(<TransferForm {...baseProps} />)
+
+        const input = screen.getByRole('textbox',{name: /destinatario/i})
+        expect(input).toHaveValue('')
+
+        userEvent.type(input, 'ger')
+        expect(input).toHaveValue('ger')
+
+        expect(onQueryReceptor).toBeCalledWith('ger')
+
+        const queryResult = ['german.pezzella@gmail.com']
+        rerender(<TransferForm {...baseProps} receptorOptions={queryResult} />)
+
+        expect(screen.getByRole('list')).toBeInTheDocument()
+
+        userEvent.click(screen.getAllByRole('listitem')[0])
+
+        expect(onSelectReceptor).toBeCalledWith(queryResult[0])
+        expect(input).toHaveValue(queryResult[0])
     })
 })
