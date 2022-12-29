@@ -1,0 +1,224 @@
+[
+    {
+        "id": 1,
+        "username": "lionel.scaloni@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
+    },
+    {
+        "id": 2,
+        "username": "emiliano.martinez@gmail.com",
+        "balance": {
+            "BTC": 560, 
+            "ETH": 2000, 
+            "USDT": 1000, 
+            "DAI": 800
+        }
+    },
+    {
+        "id": 3,
+        "username": "geronimo.rulli@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
+    },
+    {
+        "id": 4,
+        "username": "franco.armani@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
+    },
+    {
+        "id": 5,
+        "username": "nahuel.molina@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
+    },
+    {
+        "id": 6,
+        "username": "gonzalo.montiel@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
+    },
+    {
+        "id": 7,
+        "username": "cristian.romero@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
+    },
+    {
+        "id": 8,
+        "username": "german.pezzella@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
+    },
+    {
+        "id": 9,
+        "username": "nicolas.otamendi@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
+    },
+    {
+        "id": 10,
+        "username": "lisandro.martinez@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
+    },
+    {
+        "id": 11,
+        "username": "marcos.acuna@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
+    },
+    {
+        "id": 12,
+        "username": "nicolas.tagliafico@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
+    },
+    {
+        "id": 13,
+        "username": "juan.foyth@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
+    },
+    {
+        "id": 14,
+        "username": "rodrigo.de.paul@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
+    },
+    {
+        "id": 15,
+        "username": "leandro.paredes@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
+    },
+    {
+        "id": 16,
+        "username": "alexis.mac.allister@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
+    },
+    {
+        "id": 17,
+        "username": "guido.rodriguez@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
+    },
+    {
+        "id": 18,
+        "username": "alejandro.gomez@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
+    },
+    {
+        "id": 19,
+        "username": "enzo.fernandez@gmail.com",
+        "balance": {
+            "BTC": 1500, 
+            "ETH": 2500, 
+            "USDT": 3000, 
+            "DAI": 500
+        }
+    },
+    {
+        "id": 20,
+        "username": "exequiel.palacios@gmail.com"
+    },
+    {
+        "id": 21,
+        "username": "thiago.almada@gmail.com"
+    },
+    {
+        "id": 22,
+        "username": "angel.di.maria@gmail.com"
+    },
+    {
+        "id": 23,
+        "username": "lautaro.martinez@gmail.com"
+    },
+    {
+        "id": 24,
+        "username": "julian.alvarez@gmail.com"
+    },
+    {
+        "id": 25,
+        "username": "paulo.dybala@gmail.com"
+    },
+    {
+        "id": 26,
+        "username": "angel.correa@gmail.com"
+    },
+    {
+        "id": 27,
+        "username": "lionel.messi@gmail.com"
+    }
+]

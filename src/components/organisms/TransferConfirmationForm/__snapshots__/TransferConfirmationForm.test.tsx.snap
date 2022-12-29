@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TransferConfirmationForm/> Se reenderice correctamente 1`] = `
+<div>
+  <form
+    class="sc-jSUZER fMUTQF"
+  >
+    <div
+      class="sc-gswNZR kGxItT"
+    >
+      <label
+        class="sc-dkrFOg hCrmYg"
+        for="token"
+      >
+        Token
+      </label>
+      <input
+        class="sc-gKPRtg bujMUW"
+        id="token"
+        name="token"
+        type="text"
+        value=""
+      />
+      <p
+        class="sc-bcXHqe lmDvli"
+      >
+        Verificar token para confirmar la transferencia
+      </p>
+    </div>
+    <button
+      class="sc-hLBbgP jMMbMG"
+      type="submit"
+    >
+      Verificar
+    </button>
+  </form>
+</div>
+`;

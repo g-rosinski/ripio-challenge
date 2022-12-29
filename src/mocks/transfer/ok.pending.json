@@ -1,0 +1,8 @@
+{
+    "emiter": "nahuel.molina@gmail.com",
+    "receptor": "lionel.messi@gmail.com",
+    "currency": "USDT",
+    "amount": 1000,
+    "transfer_date": 1671742644758,
+    "status": "PENDING"
+}

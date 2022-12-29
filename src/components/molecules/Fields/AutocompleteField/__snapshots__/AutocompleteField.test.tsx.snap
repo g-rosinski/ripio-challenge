@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AutocompleteField /> Renderice correctamente 1`] = `
+<div>
+  <div
+    class="sc-pyfCe gqyrsL"
+  >
+    <div
+      class="sc-gswNZR kGxItT"
+    >
+      <label
+        class="sc-dkrFOg hCrmYg"
+        for="users"
+      >
+        Usuarios
+      </label>
+      <input
+        autocomplete="off"
+        class="sc-gKPRtg bujMUW"
+        id="users"
+        name="users"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TransferTicket /> Se reenderice Correctamente 1`] = `
+<div>
+  <div
+    class="sc-bcXHqe hcRRHK"
+  >
+    <div
+      class="sc-gswNZR cRPCdo"
+    >
+      <label
+        class="sc-eDvSVe MAutU"
+      >
+        Se transfirió
+        :
+      </label>
+      <label
+        class="sc-eDvSVe MAutU"
+      >
+        ETH $ 1.100,00
+      </label>
+    </div>
+    <hr
+      class="sc-jrcTuL ehiTLY"
+      role="presentation"
+    />
+    <div
+      class="sc-gswNZR cRPCdo"
+    >
+      <label
+        class="sc-eDvSVe MAutU"
+      >
+        Desde la cuenta
+        :
+      </label>
+      <label
+        class="sc-eDvSVe MAutU"
+      >
+        emisor@mail.com
+      </label>
+    </div>
+    <hr
+      class="sc-jrcTuL ehiTLY"
+      role="presentation"
+    />
+    <div
+      class="sc-gswNZR cRPCdo"
+    >
+      <label
+        class="sc-eDvSVe MAutU"
+      >
+        A la cuenta
+        :
+      </label>
+      <label
+        class="sc-eDvSVe MAutU"
+      >
+        receptor@mail.com
+      </label>
+    </div>
+    <hr
+      class="sc-jrcTuL ehiTLY"
+      role="presentation"
+    />
+    <div
+      class="sc-gswNZR cRPCdo"
+    >
+      <label
+        class="sc-eDvSVe MAutU"
+      >
+        Fecha
+        :
+      </label>
+      <label
+        class="sc-eDvSVe MAutU"
+      >
+        28/12/2022  17:25
+      </label>
+    </div>
+    <hr
+      class="sc-jrcTuL ehiTLY"
+      role="presentation"
+    />
+    <div
+      class="sc-gswNZR cRPCdo"
+    >
+      <label
+        class="sc-eDvSVe MAutU"
+      >
+        Estado de la transferencia
+        :
+      </label>
+      <label
+        class="sc-eDvSVe MAutU"
+      >
+        COMPLETED
+      </label>
+    </div>
+  </div>
+</div>
+`;

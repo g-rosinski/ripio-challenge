@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TransferForm/> Se reenderice correctamente 1`] = `
+<div>
+  <form
+    class="sc-jSUZER fMUTQF"
+  >
+    <div
+      class="sc-gswNZR kGxItT"
+    >
+      <label
+        class="sc-dkrFOg hCrmYg"
+        for="emiter"
+      >
+        Emisor
+      </label>
+      <input
+        class="sc-gKPRtg bujMUW"
+        disabled=""
+        id="emiter"
+        name="emiter"
+        readonly=""
+        type="text"
+        value="usuario@mail.com"
+      />
+    </div>
+    <div
+      class="sc-pyfCe gqyrsL"
+    >
+      <div
+        class="sc-gswNZR kGxItT"
+      >
+        <label
+          class="sc-dkrFOg hCrmYg"
+          for="receptor"
+        >
+          Destinatario
+        </label>
+        <input
+          autocomplete="off"
+          class="sc-gKPRtg bujMUW"
+          id="receptor"
+          name="receptor"
+          type="text"
+          value=""
+        />
+        <p
+          class="sc-bcXHqe lmDvli"
+        >
+          Ingresar el mail del contacto
+        </p>
+      </div>
+    </div>
+    <div
+      class="sc-csuSiG benBnR"
+    >
+      <div
+        class="sc-gswNZR kGxItT"
+      >
+        <label
+          class="sc-dkrFOg hCrmYg"
+          for="currency"
+        >
+          Moneda
+        </label>
+        <select
+          class="sc-iBYQkv dOcTND"
+          id="currency"
+        >
+          <option
+            value="BTC"
+          >
+            BTC
+          </option>
+          <option
+            value="ETH"
+          >
+            ETH
+          </option>
+          <option
+            value="USDT"
+          >
+            USDT
+          </option>
+          <option
+            value="DAI"
+          >
+            DAI
+          </option>
+        </select>
+      </div>
+      <div
+        class="sc-gswNZR kGxItT"
+      >
+        <label
+          class="sc-dkrFOg hCrmYg"
+          for="amount"
+        >
+          Importe
+        </label>
+        <input
+          class="sc-gKPRtg bujMUW"
+          id="amount"
+          name="amount"
+          type="text"
+          value=""
+        />
+        <p
+          class="sc-bcXHqe lmDvli"
+        >
+          Ingresar un importe a transferir.
+        </p>
+      </div>
+    </div>
+    <button
+      class="sc-hLBbgP jMMbMG"
+      type="submit"
+    >
+      Transferir
+    </button>
+  </form>
+</div>
+`;

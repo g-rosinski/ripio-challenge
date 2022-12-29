@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LabellyRecord /> Se reenderice Correctamente 1`] = `
+<div>
+  <div
+    class="sc-bcXHqe iqcvMI"
+  >
+    <label
+      class="sc-hLBbgP ksCyWo"
+    >
+      Cuenta de destino
+      :
+    </label>
+    <label
+      class="sc-hLBbgP ksCyWo"
+    >
+      receptor@mail.com
+    </label>
+  </div>
+  <hr
+    class="sc-pyfCe dkPJOj"
+    role="presentation"
+  />
+</div>
+`;
