@@ -1,7 +1,7 @@
 import React from "react"
 import { useForm } from "../../../hooks/useForm/useForm.hook"
 import { Button, Form } from "../../atoms"
-import { TextField, SelectField } from "../../molecules/Fields"
+import { TextField, SelectField, AutocompleteField } from "../../molecules/Fields"
 import { CurrencySection } from "./TransferForm.styles"
 import { TransferFormProps, TransferFormType } from "./TransferForm.types"
 
@@ -9,6 +9,8 @@ export const TransferForm: React.FC<TransferFormProps> = ({
     initialValues,
     currencies,
     editable = true,
+    receptorOptions,
+    onQueryReceptor,
     onSubmit,
     validateForm,
 }) => {
@@ -17,7 +19,8 @@ export const TransferForm: React.FC<TransferFormProps> = ({
         values, 
         errors, 
         handleOnChangeField, 
-        handleOnSubmitForm 
+        handleOnSubmitForm,
+        changeFieldValue
     } = useForm<TransferFormType>({
         initialValues,
         validateForm,
@@ -35,7 +38,7 @@ export const TransferForm: React.FC<TransferFormProps> = ({
                 readOnly
             />
 
-            <TextField 
+            <AutocompleteField 
                 name="receptor"
                 label="Destinatario"
                 helper="Ingresar el mail del contacto"
@@ -43,10 +46,12 @@ export const TransferForm: React.FC<TransferFormProps> = ({
                 error={errors.receptor}
                 disabled={!editable}
                 onChange={handleOnChangeField}
+                onSelectOption={option => changeFieldValue("receptor", option)}
+                onQuery={onQueryReceptor}
+                options={receptorOptions}
             />
             
             <CurrencySection>
-                
                 <SelectField 
                     name="currency"
                     label="Moneda"

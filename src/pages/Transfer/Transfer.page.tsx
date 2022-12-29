@@ -2,18 +2,18 @@ import React, { useCallback, useEffect }  from "react"
 import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
 
-import { TransferForm, TransferFormType } from "../../components/organisms/TransferForm"
+import { paths } from "../../routers/app.router"
 import { isEmail, maxValue, required } from "../../shared/validation.rules"
+import { currencyFormat } from "../../shared/formatter"
+import { BasicPage } from "../../components/layouts/BasicPage"
+import { TransferForm, TransferFormType } from "../../components/organisms/TransferForm"
+import { Title } from "../../components/atoms"
+import { useUserContext } from "../../contexts/UserContext"
 import { CURRENCY_LIST } from "../../mocks/crypto-currencies"
 import { RootState, useAppDispatch } from "../../redux/store"
 import { newTransfer, setTransfer } from "../../redux/slices/transferSlice"
-import { Title } from "../../components/atoms"
 import { existUser } from "../../services/userService"
-import { BasicPage } from "../../components/layouts/BasicPage"
-import { paths } from "../../routers/app.router"
-import { useFormValidator } from "../../hooks"
-import { useUserContext } from "../../contexts/UserContext"
-import { currencyFormat } from "../../shared/formatter"
+import { useFormValidator, useQueryUsers } from "../../hooks"
 
 export const TransferPage: React.FC = () => {
     const navigate = useNavigate()
@@ -21,6 +21,7 @@ export const TransferPage: React.FC = () => {
     const { balance } = useSelector((state: RootState) => state.balance)
     const transfer = useSelector((state: RootState) => state.transfer)
     const { validateForm } = useFormValidator<TransferFormType>()
+    const { queryResults, setQuery} = useQueryUsers({})
     const { user } = useUserContext()
 
     useEffect(() => {
@@ -52,7 +53,7 @@ export const TransferPage: React.FC = () => {
     return (
         <BasicPage>
             <Title>Enviar transferencia</Title>
-            
+
             <TransferForm 
                 initialValues={{
                     ...transfer, 
@@ -63,10 +64,11 @@ export const TransferPage: React.FC = () => {
                     value: currency, 
                     label: `${currency} - Saldo: ${currencyFormat(balance[currency] || 0)}`
                 }))}
+                receptorOptions={queryResults}
+                onQueryReceptor={setQuery}
                 onSubmit={handleOnSubmitForm}
                 validateForm={validateTransferForm}
             />
         </BasicPage>
     )
 }
-

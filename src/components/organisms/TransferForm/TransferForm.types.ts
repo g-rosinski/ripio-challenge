@@ -9,6 +9,8 @@ export type TransferFormType = {
 }
 
 export type TransferFormProps = UseFormProps<TransferFormType> & {
-    currencies: SelectOption[]
+    currencies: SelectOption[],
+    onQueryReceptor: (username:string) => void,
+    receptorOptions: string[] 
     editable?: boolean,
 }

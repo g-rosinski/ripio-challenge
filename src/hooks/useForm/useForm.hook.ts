@@ -10,7 +10,8 @@ type UseFormReturn<Form extends {}> = {
     values: Form,
     errors: {[key in keyof Form]?: string},
     handleOnChangeField: (e:ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void,
-    handleOnSubmitForm: (e: FormEvent) => void
+    handleOnSubmitForm: (e: FormEvent) => void,
+    changeFieldValue: (field: keyof Form, value: string) => void
 }
 
 
@@ -18,11 +19,15 @@ export const useForm = <F extends {}>({initialValues, validateForm, onSubmit}: U
     const [values, setValues] = useState<F>(initialValues)
     const [errors, setErrors] = useState<{[key in keyof F]?: string}>({})
 
-    const handleOnChangeField = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const changeFieldValue = useCallback((field: keyof F, value: string) => {
         setValues({
             ...values,
-            [e.target.name]: e.target.value
+            [field]: value
         })
+    }, [values, setValues])
+
+    const handleOnChangeField = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+        changeFieldValue(e.target.name as keyof F, e.target.value)
     }
 
     const handleOnSubmitForm = useCallback((e: FormEvent) => {
@@ -39,6 +44,7 @@ export const useForm = <F extends {}>({initialValues, validateForm, onSubmit}: U
     return {
         values,
         errors,
+        changeFieldValue,
         handleOnChangeField,
         handleOnSubmitForm
     }

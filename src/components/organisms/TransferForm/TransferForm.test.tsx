@@ -10,11 +10,14 @@ describe('<TransferForm/>', () => {
     const initialValuesForm: TransferFormType = { emiter: 'usuario@mail.com', receptor: '', currency: currencies[0].value, amount: ''}
     const onSubmitMock = jest.fn()
     const validateForm = jest.fn()
+    const onQueryReceptor = jest.fn()
     
     const baseProps = {
         initialValues: initialValuesForm,
         onSubmit: onSubmitMock,
         validateForm: validateForm,
+        onQueryReceptor,
+        receptorOptions: [],
         currencies
     }
 
